@@ -1,0 +1,26 @@
+<h2>Authentication</h2>
+<hr>
+{{#if hasNoEmployers}}
+    Please seed the employer table.
+{{else}}
+    <div class="col-md-6">
+        <form>
+            <div class="form-group">
+                <label for="employer">Demo Dispensary Login</label>
+                <select data-bind="model" class="form-control" name="_id">
+                    <option selected="selected" disabled="disabled">Please select an employer</option>
+                    {{#each list}}
+                        <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+                </select>
+                <span class="help-block hidden"></span>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input data-bind="model" type="password" class="form-control" name="password" placeholder="Password">
+                <span class="help-block hidden"></span>
+            </div>
+            <button type="submit" class="btn btn-default" name="submit">Submit</button>
+        </form>
+    </div>
+{{/if}}

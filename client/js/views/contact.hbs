@@ -1,0 +1,70 @@
+<h2>Contact View
+    <button type="button" class="btn btn-default btn-sm pull-right" name="cancel">
+        <span class="glyphicon glyphicon-remove"></span> Cancel
+    </button>
+</h2>
+<hr>
+<form>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input data-bind="model" type="text" class="form-control" name="firstName">
+                <span class="help-block hidden"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input data-bind="model" type="text" class="form-control" name="lastName">
+                <span class="help-block hidden"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input data-bind="model" type="text" class="form-control" name="email">
+                <span class="help-block hidden"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input data-bind="model" type="text" class="form-control" name="phone">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="addr1">Address</label>
+                <input data-bind="model" type="text" class="form-control" name="addr1"><br>
+                <input data-bind="model" type="text" class="form-control" name="addr2">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="city">City</label>
+                <input data-bind="model" type="text" class="form-control" name="city">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="city">State</label>
+                <input data-bind="model" type="text" class="form-control" name="state">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label for="city">Zip</label>
+                <input data-bind="model" type="text" class="form-control" name="zip">
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-default" name="submit">Submit</button>
+
+</form>

@@ -1,0 +1,36 @@
+
+<h2>Employee List
+    <button type="button" class="btn btn-default btn-sm pull-right" name="addContact">
+        <span class="glyphicon glyphicon-plus"></span> Add Contact
+    </button>
+</h2>
+<hr>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <tr>
+            <th class="text-xs-center">First Name</th>
+            <th class="text-xs-center">Last Name</th>
+            <th class="text-xs-center">Email</th>
+            <th class="text-xs-center col-md-3">Actions</th>
+        </tr>
+        {{#if hasNoContacts}}
+            <tr>
+                <td colspan="4">There are no contacts.</td>
+            </tr>
+        {{else}}
+            {{#each list}}
+                <tr>
+                    <td>{{firstName}}</td>
+                    <td>{{lastName}}</td>
+                    <td>{{email}}</td>
+                    <td><div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default" name="view" id="{{_id}}"><span class="glyphicon glyphicon-zoom-in"></span> View</button>
+                        <button type="button" class="btn btn-default" name="update" id="{{_id}}"><span class="glyphicon glyphicon-pencil"></span> Update</button>
+                        <button type="button" class="btn btn-default" name="delete" id="{{_id}}"><span class="glyphicon glyphicon-remove"></span> Delete</button>
+                    </div></td>
+                </tr>
+            {{/each}}
+        {{/if}}
+    </table>
+</div>
